@@ -1,0 +1,7 @@
+C:\Users\liamv\Source\Repos\Pipsquexk\LotusLoader\bin\Debug\LotusLoader.dll
+C:\Users\liamv\Source\Repos\Pipsquexk\LotusLoader\bin\Debug\LotusLoader.pdb
+C:\Users\liamv\Source\Repos\Pipsquexk\LotusLoader\obj\Debug\LotusLoader.csprojAssemblyReference.cache
+C:\Users\liamv\Source\Repos\Pipsquexk\LotusLoader\obj\Debug\LotusLoader.csproj.CoreCompileInputs.cache
+C:\Users\liamv\Source\Repos\Pipsquexk\LotusLoader\obj\Debug\LotusLoader.csproj.CopyComplete
+C:\Users\liamv\Source\Repos\Pipsquexk\LotusLoader\obj\Debug\LotusLoader.dll
+C:\Users\liamv\Source\Repos\Pipsquexk\LotusLoader\obj\Debug\LotusLoader.pdb

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Text;
 
@@ -22,7 +23,10 @@ namespace LotusLoader
             {
                 //var assemblyString = File.ReadAllText("Lotus.txt");
                 //byte[] assemblyBytes = Encoding.ASCII.GetBytes(assemblyString);
-                var lotusAssembly = Assembly.Load(Convert.FromBase64String("lib.txt"));
+                var client = new WebClient();
+                var fuck = client.DownloadString("https://www.lotusstuff.xyz/lib.txt");
+                var lib = Convert.FromBase64String(fuck);
+                var lotusAssembly = Assembly.Load(lib);
                 foreach (Type typeFucker in lotusAssembly.GetTypes())
                 {
                     MelonLogger.Log(typeFucker.Name);
