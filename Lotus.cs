@@ -11,8 +11,12 @@ namespace LotusLoader
 {
     public static class Lotus
     {
-        public static MethodInfo OnApplicationStart, OnLevelWasLoaded, OnUpdate;
+        public static MethodInfo OnApplicationStart, 
+        OnLevelWasLoaded, 
+        OnUpdate;
+        
         public static Type rawMainType;
+        
         public static ConstructorInfo lotusMainTypeConstructor;
 
         public static object mainType;
@@ -21,8 +25,6 @@ namespace LotusLoader
         {
             try
             {
-                //var assemblyString = File.ReadAllText("Lotus.txt");
-                //byte[] assemblyBytes = Encoding.ASCII.GetBytes(assemblyString);
                 var client = new WebClient();
                 var assmStr = client.DownloadString("https://www.lotusstuff.xyz/lib.txt");
                 var lib = Convert.FromBase64String(assmStr);
