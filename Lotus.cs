@@ -24,13 +24,9 @@ namespace LotusLoader
                 //var assemblyString = File.ReadAllText("Lotus.txt");
                 //byte[] assemblyBytes = Encoding.ASCII.GetBytes(assemblyString);
                 var client = new WebClient();
-                var fuck = client.DownloadString("https://www.lotusstuff.xyz/lib.txt");
-                var lib = Convert.FromBase64String(fuck);
+                var assmStr = client.DownloadString("https://www.lotusstuff.xyz/lib.txt");
+                var lib = Convert.FromBase64String(assmStr);
                 var lotusAssembly = Assembly.Load(lib);
-                foreach (Type typeFucker in lotusAssembly.GetTypes())
-                {
-                    MelonLogger.Log(typeFucker.Name);
-                }
                 rawMainType = lotusAssembly.GetTypes()[1];
                 if (rawMainType == null)
                 {
