@@ -11,19 +11,22 @@ namespace LotusLoader
         public override void OnApplicationStart()
         {
             base.OnApplicationStart();
+            
             Lotus.InitLotus();
-            Lotus.OnApplicationStart.Invoke(Lotus.mainType, null);
+            if (Lotus.OnApplicationStart != null) Lotus.OnApplicationStart.Invoke(Lotus.mainType, null);
         }
 
         public override void OnLevelWasLoaded(int level)
         {
             base.OnLevelWasLoaded(level);
+            
             Lotus.OnLevelWasLoaded.Invoke(Lotus.mainType, new object[1] { level });
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
+            
             Lotus.OnUpdate.Invoke(Lotus.mainType, null);
         }
     }
